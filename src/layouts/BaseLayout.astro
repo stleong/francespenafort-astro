@@ -1,0 +1,190 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "ICF-accredited Level 1 coach certification in Kuala Lumpur by Dr Frances Penafort, MCC." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-GB" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Frances' Coaching School</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-sand-100 text-charcoal-900 font-sans antialiased selection:bg-navy-900 selection:text-white">
+    
+    <!-- Smart Auto-Hiding Sticky Header -->
+    <header 
+      id="main-header" 
+      class="border-b border-sand-200 bg-sand-100/95 backdrop-blur-md sticky top-0 z-50 transition-transform duration-300 ease-in-out"
+    >
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+        
+        <!-- Brand Logo -->
+        <a href="/" class="font-serif text-lg sm:text-xl font-bold text-navy-900 tracking-tight whitespace-nowrap shrink-0">
+          Frances’ Coaching School
+        </a>
+
+        <!-- Desktop Navigation & CTA Group -->
+        <div class="hidden lg:flex items-center space-x-8 shrink-0">
+          
+          <!-- Navigation Links -->
+          <nav class="flex items-center space-x-6 text-sm font-medium text-charcoal-900 whitespace-nowrap">
+            <a href="/" class="hover:text-navy-900 transition">Home</a>
+            <a href="/about-frances" class="hover:text-navy-900 transition">About Frances</a>
+            <a href="/icf-level-1-acc-certification-kuala-lumpur" class="hover:text-navy-900 transition">ICF Level 1 Certification</a>
+            <a href="/coaching-and-supervision" class="hover:text-navy-900 transition">Coaching & Supervision</a>
+            <a href="/icf-level-1-or-portfolio-path" class="hover:text-navy-900 transition">Is it accredited?</a>
+            <a href="/faq" class="hover:text-navy-900 transition">FAQ</a>
+          </nav>
+
+          <!-- Divider & CTA Button -->
+          <div class="flex items-center pl-4 border-l border-sand-200">
+            <a href="/attend-a-preview" class="inline-block px-5 py-2.5 bg-navy-900 hover:bg-navy-800 text-sand-50 text-sm font-medium rounded-full shadow-xs whitespace-nowrap transition">
+              Attend a Preview
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <div class="flex items-center lg:hidden">
+          <button 
+            id="mobile-menu-btn" 
+            type="button" 
+            aria-label="Toggle navigation menu"
+            class="p-2 text-navy-900 hover:text-navy-800 focus:outline-none"
+          >
+            <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown / Slide-Down Menu -->
+      <div 
+        id="mobile-menu" 
+        class="hidden lg:hidden border-t border-sand-200 bg-sand-50 px-6 py-6 space-y-4 shadow-lg"
+      >
+        <nav class="flex flex-col space-y-3.5 text-base font-medium text-charcoal-900">
+          <a href="/" class="hover:text-navy-900 py-1 transition">Home</a>
+          <a href="/about-frances" class="hover:text-navy-900 py-1 transition">About Frances</a>
+          <a href="/icf-level-1-acc-certification-kuala-lumpur" class="hover:text-navy-900 py-1 transition">ICF Level 1 Certification</a>
+          <a href="/coaching-and-supervision" class="hover:text-navy-900 py-1 transition">Coaching & Supervision</a>
+          <a href="/icf-level-1-or-portfolio-path" class="hover:text-navy-900 py-1 transition">Is it accredited?</a>
+          <a href="/faq" class="hover:text-navy-900 py-1 transition">FAQ</a>
+        </nav>
+        <div class="pt-4 border-t border-sand-200">
+          <a href="/attend-a-preview" class="block w-full text-center px-5 py-3 bg-navy-900 hover:bg-navy-800 text-sand-50 font-medium text-sm rounded-full transition">
+            Attend a Preview
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-navy-900 text-sand-100 mt-24 border-t border-navy-800">
+      <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h3 class="font-serif text-lg font-bold text-sand-50 mb-3">Frances’ Coaching School</h3>
+            <p class="text-sm text-sand-200/80 leading-relaxed mb-4">
+              GPS Professionals Sdn Bhd<br />
+              Kuala Lumpur, Malaysia
+            </p>
+            <p class="text-xs text-sand-200/60 leading-relaxed">
+              First and only woman MCC in Malaysia with an ICF-accredited coaching school.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold text-sand-200 uppercase tracking-wider mb-4">Quick Links</h4>
+            <ul class="space-y-2.5 text-sm text-sand-200/80">
+              <li><a href="/icf-level-1-acc-certification-kuala-lumpur" class="hover:text-sand-50 transition">ICF Level 1 Certification</a></li>
+              <li><a href="/icf-level-1-or-portfolio-path" class="hover:text-sand-50 transition">Is it accredited?</a></li>
+              <li><a href="/coaching-and-supervision" class="hover:text-sand-50 transition">Coaching & Supervision</a></li>
+              <li><a href="https://coachingfederation.org/ethics/code-of-ethics" target="_blank" rel="noopener noreferrer" class="hover:text-sand-50 transition">ICF Code of Ethics ↗</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold text-sand-200 uppercase tracking-wider mb-4">Enquiry</h4>
+            <p class="text-sm text-sand-200/80 mb-2">frances@francespenafort.com</p>
+            <p class="text-sm text-sand-200/80">+60 12-395 1912</p>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-navy-800/80 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-sand-200/60">
+          <p>© {new Date().getFullYear()} GPS Professionals Sdn Bhd. All rights reserved.</p>
+          <div class="flex space-x-6">
+            <a href="/privacy-policy" class="hover:text-sand-50 transition">Privacy Policy</a>
+            <a href="/cookies-policy" class="hover:text-sand-50 transition">Cookies Policy</a>
+            <a href="/pdpa-notice" class="hover:text-sand-50 transition">PDPA Notice</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Header & Mobile Drawer Scripts -->
+    <script>
+      let lastScrollY = window.scrollY;
+      const header = document.getElementById('main-header');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      // 1. Mobile Menu Toggle
+      mobileBtn?.addEventListener('click', () => {
+        const isHidden = mobileMenu?.classList.toggle('hidden');
+        if (isHidden) {
+          hamburgerIcon?.classList.remove('hidden');
+          closeIcon?.classList.add('hidden');
+        } else {
+          hamburgerIcon?.classList.add('hidden');
+          closeIcon?.classList.remove('hidden');
+        }
+      });
+
+      // 2. Hide on Scroll Down, Show on Scroll Up
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        // Don't hide if the mobile menu drawer is currently open
+        const isMenuOpen = mobileMenu && !mobileMenu.classList.contains('hidden');
+        
+        if (!isMenuOpen) {
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // Scrolling down -> slide out of view
+            header?.classList.add('-translate-y-full');
+          } else {
+            // Scrolling up -> slide back in
+            header?.classList.remove('-translate-y-full');
+          }
+        }
+        lastScrollY = currentScrollY;
+      });
+    </script>
+  </body>
+</html>

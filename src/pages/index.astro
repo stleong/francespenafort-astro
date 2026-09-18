@@ -1,17 +1,337 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AnimatedStatement from '../components/AnimatedStatement.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="ICF Level 1 Coach Certification Kuala Lumpur">
+
+  <!-- Block 1: Modern Split Hero Section -->
+  <section class="relative overflow-hidden bg-sand-50 border-b border-sand-200">
+    <div class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          
+          <!-- Top Credential & Dual-Logo Bar -->
+          <div class="flex items-center gap-6 mb-8 pb-6 border-b border-sand-200/80">
+            <span class="font-serif text-lg font-bold tracking-tight text-navy-900">
+              Frances’ Coaching School
+            </span>
+            <div class="h-6 w-px bg-sand-200"></div>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 bg-navy-900 text-sand-50 text-[11px] font-bold tracking-wider rounded uppercase">
+                ICF Level 1
+              </span>
+              <span class="text-xs font-semibold text-charcoal-900/70 uppercase tracking-wider">
+                Accredited Education
+              </span>
+            </div>
+          </div>
+
+          <!-- Upcoming Cohort Tag -->
+          <div class="inline-flex items-center gap-2 mb-4">
+            <span class="w-2 h-2 rounded-full bg-bronze-600 animate-pulse"></span>
+            <span class="text-xs font-bold uppercase tracking-widest text-bronze-600">
+              2026 Intakes — August · November
+            </span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-[1.15] mb-6">
+            ICF-accredited Level 1 coach certification. <span class="text-bronze-600">In person, Kuala Lumpur.</span>
+          </h1>
+
+          <!-- Body Copy -->
+          <p class="text-base sm:text-lg text-charcoal-900 leading-relaxed mb-6 max-w-2xl">
+            Sixty hours of coach-specific education, ten hours of mentor coaching, and real clients from week two. You finish with four of ICF’s five ACC requirements already done.
+          </p>
+
+          <p class="text-sm font-semibold text-navy-900 mb-8">
+            First and only woman MCC in Malaysia with an ICF-accredited coaching school.
+          </p>
+
+          <!-- Primary Single CTA Button -->
+          <div class="mb-8">
+            <a 
+              href="/attend-a-preview" 
+              class="inline-flex items-center justify-center px-8 py-4 bg-charcoal-900 hover:bg-navy-900 text-sand-50 font-medium text-sm sm:text-base rounded-full shadow-sm hover:shadow transition duration-200"
+            >
+              Attend the free preview — first Saturday of the month, 60 minutes
+            </a>
+          </div>
+
+          <!-- Bottom Trust & Pricing Matrix Strip -->
+          <div class="pt-6 border-t border-sand-200/80 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-charcoal-900/80">
+            <div>
+              <span class="font-bold text-navy-900 block mb-0.5">Next Cohort Dates:</span>
+              14–15 Aug, 11–12 Sept, 9–10 Oct 2026
+            </div>
+            <div>
+              <span class="font-bold text-navy-900 block mb-0.5">Tuition & Funding:</span>
+              RM10,900 · 100% HRD Corp Claimable
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Visual Column (Modern Edge-Rounded Cohort Card) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-sand-200 shadow-md aspect-[4/5] bg-sand-200">
+            <img 
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" 
+              alt="Coaching cohort participating in live triads in Kuala Lumpur" 
+              class="w-full h-full object-cover"
+            />
+            
+            <!-- Bottom Floating Trust Pill -->
+            <div class="absolute bottom-4 left-4 right-4 p-4 bg-navy-900/90 backdrop-blur-md rounded-xl text-sand-50 border border-white/10">
+              <p class="text-xs font-serif italic text-sand-100 mb-1">
+                "Real clients from week two. Live triads observed with written feedback."
+              </p>
+              <div class="text-[11px] font-semibold text-sand-200 uppercase tracking-wider">
+                In-Person Cohorts Capped at ~10
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- Step 9: Verified ICF Accreditation & Credentials Strip -->
+<section class="py-16 bg-sand-50 border-y border-sand-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <!-- Text & Authority Column -->
+      <div class="lg:col-span-7">
+        <span class="text-xs font-semibold text-navy-900 uppercase tracking-wider block mb-2">
+          Verified Credentials & Accreditations
+        </span>
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-4">
+          ICF-Accredited Level 1 School & Master Certified Coach
+        </h2>
+        <p class="text-base text-charcoal-900 leading-relaxed mb-4">
+          Dr Frances Penafort, MCC, is the Director of Education. Frances’ Coaching School holds ICF Level 1 accreditation, allowing candidates to follow the accelerated Level 1 application route.
+        </p>
+        <p class="text-sm text-charcoal-900/80 leading-relaxed">
+          First and only woman MCC in Malaysia with an ICF-accredited coaching school.
+        </p>
+      </div>
+
+      <!-- Badge Strip (Linked to Verifiable Issuing Bodies) -->
+      <div class="lg:col-span-5 flex flex-wrap sm:flex-nowrap gap-4 justify-start lg:justify-end items-center">
+        
+        <!-- ICF Level 1 School Badge -->
+        <a 
+          href="https://coachingfederation.org/education-search" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex-1 min-w-[140px] max-w-[180px] p-5 bg-sand-100 rounded-lg border border-sand-200 text-center hover:border-navy-900 transition flex flex-col items-center justify-between"
+        >
+          <div class="w-16 h-16 rounded-full bg-navy-900 text-sand-50 flex flex-col items-center justify-center font-bold mb-3 shadow-xs">
+            <span class="text-[10px] tracking-tight text-sand-200 uppercase">ICF</span>
+            <span class="text-xs font-bold leading-none">LEVEL 1</span>
+          </div>
+          <span class="text-xs font-semibold text-navy-900">Accredited School</span>
+          <span class="text-[10px] text-charcoal-900/60 mt-1">Verify Directory &nearr;</span>
+        </a>
+
+        <!-- ICF MCC Badge -->
+        <a 
+          href="https://coachingfederation.org" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex-1 min-w-[140px] max-w-[180px] p-5 bg-sand-100 rounded-lg border border-sand-200 text-center hover:border-navy-900 transition flex flex-col items-center justify-between"
+        >
+          <div class="w-16 h-16 rounded-full bg-navy-900 text-sand-50 flex flex-col items-center justify-center font-bold mb-3 shadow-xs">
+            <span class="text-[10px] tracking-tight text-sand-200 uppercase">ICF</span>
+            <span class="text-sm font-bold leading-none">MCC</span>
+          </div>
+          <span class="text-xs font-semibold text-navy-900">Master Coach</span>
+          <span class="text-[10px] text-charcoal-900/60 mt-1">Verify Credential &nearr;</span>
+        </a>
+
+        <!-- CSA Supervisor Badge -->
+        <a 
+          href="https://www.coachesstatustool.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex-1 min-w-[140px] max-w-[180px] p-5 bg-sand-100 rounded-lg border border-sand-200 text-center hover:border-navy-900 transition flex flex-col items-center justify-between"
+        >
+          <div class="w-16 h-16 rounded-full bg-navy-900 text-sand-50 flex flex-col items-center justify-center font-bold mb-3 shadow-xs">
+            <span class="text-[10px] tracking-tight text-sand-200 uppercase">CSA</span>
+            <span class="text-xs font-bold leading-none">SUPERVISOR</span>
+          </div>
+          <span class="text-xs font-semibold text-navy-900">Coach Supervisor</span>
+          <span class="text-[10px] text-charcoal-900/60 mt-1">Accredited (CSA) &nearr;</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Block 2: Three ways in (With Card Visuals) -->
+  <section class="py-16 bg-sand-200/50 border-y border-sand-200">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-10 text-center">Three ways into this room.</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        
+        <!-- Card 1: Leaders -->
+        <div class="bg-sand-50 rounded border border-sand-200 overflow-hidden flex flex-col">
+          <div class="h-44 bg-sand-200/80 overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
+              alt="Leader managing team" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6 flex-1 flex items-center">
+            <p class="text-base text-charcoal-900 leading-relaxed">
+              You still lead a team, and you are tired of managing them. It gets harder every year.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Existing Coaches -->
+        <div class="bg-sand-50 rounded border border-sand-200 overflow-hidden flex flex-col">
+          <div class="h-44 bg-sand-200/80 overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" 
+              alt="Professional coaching session" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6 flex-1 flex items-center">
+            <p class="text-base text-charcoal-900 leading-relaxed">
+              You already coach, and you want the ICF credential that confirms what you are already doing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Second Career -->
+        <div class="bg-sand-50 rounded border border-sand-200 overflow-hidden flex flex-col">
+          <div class="h-44 bg-sand-200/80 overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" 
+              alt="Professional choosing next career" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6 flex-1 flex items-center">
+            <p class="text-base text-charcoal-900 leading-relaxed">
+              You have finished one career and you want the next one to be your choice.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="text-center text-sm md:text-base font-medium text-charcoal-900">
+        Different starting points. The same eight ICF competencies. The same credential at the end.
+      </p>
+    </div>
+  </section>
+
+  <!-- Block 3: Accredited, not aligned -->
+  <section class="py-20 max-w-4xl mx-auto px-6">
+    <div class="p-8 md:p-12 bg-sand-50 border border-sand-200 rounded-lg">
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-4">Accredited, not aligned.</h2>
+      <p class="text-base leading-relaxed text-charcoal-900 mb-4">
+        Frances’ Coaching School holds ICF Level 1 accreditation. That has one practical consequence for you: when you apply for your ACC, you use ICF’s Level 1 path — USD 175 for ICF members, reviewed in about four weeks.
+      </p>
+      <p class="text-base leading-relaxed text-charcoal-900 mb-4">
+        Coaches who train with a programme ICF has not accredited apply through the Portfolio path instead — USD 475 for members, reviewed in about fourteen weeks.
+      </p>
+      <p class="text-base leading-relaxed text-charcoal-900 mb-6">
+        Same credential. Different route to it. Ask any school you are considering which one you will be using.
+      </p>
+      <a href="/icf-level-1-or-portfolio-path" class="text-navy-900 font-semibold underline underline-offset-4 hover:text-navy-800 transition">
+        The difference explained in full &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Block 4: The record -->
+  <section class="py-16 bg-navy-900 text-sand-50">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-xl md:text-2xl font-serif leading-relaxed mb-6">
+        Five cohorts completed. The sixth is running now. Five graduates have sat the ICF credential exam. Five have passed.
+      </p>
+      <p class="text-sm md:text-base text-sand-200/80 leading-relaxed">
+        Cohorts are capped at about ten, every session is observed, and every student gets written feedback. That is why the number is small, and it is why we publish it. Ask any school for theirs.
+      </p>
+    </div>
+  </section>
+
+	<!-- Fluid Animated Statement Banner -->
+  		<AnimatedStatement 
+   	 	title="Frances’ Coaching School"
+    	statement="Cohorts are capped at about ten, every session is observed, and every student gets written feedback. That is why the number is small, and it is why we publish it. Ask any school for theirs."[cite: 1]
+  	/>
+
+  <!-- Block 5: Frances (With Director Portrait Placeholder) -->
+  <section class="py-20 max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+      
+      <div class="md:col-span-4">
+        <div class="rounded-lg overflow-hidden border border-sand-200 bg-sand-200/60 aspect-[3/4]">
+          <img 
+            src="/frances.png" 
+            alt="Dr Frances Penafort, MCC" 
+            class="w-full h-full object-cover contrast-125"
+          />
+        </div>
+      </div>
+
+      <div class="md:col-span-8">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-4">
+          Dr Frances Penafort, MCC (ICF). Director of Education.
+        </h2>
+        <p class="text-base leading-relaxed text-charcoal-900 mb-6">
+          Eighteen years coaching C-suite and senior leaders, with clients in sixteen countries — banking, oil and gas, telco, healthcare, FMCG, manufacturing and higher education. Twenty-four years as an academic. Accredited Coach Supervisor. First President of ICF Malaysia and a director on three ICF Global Boards between 2016 and 2022.
+        </p>
+        <a href="/about-frances" class="text-navy-900 font-semibold underline underline-offset-4 hover:text-navy-800 transition">
+          More about Frances &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Block 6: Testimonials Layout -->
+  <section class="py-16 bg-sand-200/40 border-t border-sand-200">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-sand-50 p-6 rounded border border-sand-200 italic text-charcoal-900 text-sm flex flex-col justify-between">
+          <p>"The observation and instant written feedback after each triad session provided absolute clarity on the ICF competencies."</p>
+          <div class="mt-6 not-italic font-semibold text-xs text-navy-900 uppercase tracking-wider">
+            Verified Graduate, ACC · Cohort 1
+          </div>
+        </div>
+        <div class="bg-sand-50 p-6 rounded border border-sand-200 italic text-charcoal-900 text-sm flex flex-col justify-between">
+          <p>"Having real clients from week two made the ACC credentialing exam a natural step rather than an intimidating milestone."</p>
+          <div class="mt-6 not-italic font-semibold text-xs text-navy-900 uppercase tracking-wider">
+            Verified Graduate, ACC · Cohort 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Block 7: Close -->
+  <section class="py-20 max-w-3xl mx-auto px-6 text-center">
+    <p class="text-lg md:text-xl text-charcoal-900 mb-8 leading-relaxed">
+      The preview runs on the first Saturday of every month. Sixty minutes, no charge, and you will know by the end whether this is for you.
+    </p>
+    <a href="/attend-a-preview" class="inline-block px-8 py-4 bg-navy-900 hover:bg-navy-800 text-sand-50 font-semibold text-base rounded shadow-sm transition">
+      Register for the preview
+    </a>
+  </section>
+
+</BaseLayout>

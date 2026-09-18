@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AnimatedStatement from '../components/AnimatedStatement.astro';
+---
+
+<BaseLayout 
+  title="About Dr Frances Penafort | Master Certified Coach (MCC)"
+  description="Dr Frances Penafort is an ICF Master Certified Coach (MCC), Accredited Coach Supervisor (CSA), and Director of Education at Frances’ Coaching School in Kuala Lumpur."
+>
+
+  <!-- Hero / Profile Intro Header -->
+  <section class="py-16 md:py-24 max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Portrait Column -->
+      <div class="lg:col-span-5">
+        <div class="relative rounded-2xl overflow-hidden border border-sand-200 shadow-md aspect-[4/5] bg-sand-200">
+          <img 
+            src="/frances.png" 
+            alt="Dr Frances Penafort, MCC" 
+            class="w-full h-full object-cover contrast-110"
+          />
+          <div class="absolute bottom-4 left-4 right-4 p-4 bg-navy-900/90 backdrop-blur-md rounded-xl text-sand-50 border border-white/10">
+            <div class="font-serif font-bold text-sm text-sand-50">Dr Frances Penafort, MCC</div>
+            <div class="text-[11px] font-semibold text-sand-200/80 uppercase tracking-wider mt-0.5">
+              Director of Education
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio Summary Column -->
+      <div class="lg:col-span-7">
+        <span class="text-xs font-semibold text-bronze-600 uppercase tracking-widest block mb-3">
+          Director of Education
+        </span>
+        <h1 class="font-serif text-3xl md:text-5xl font-bold text-navy-900 leading-tight mb-6">
+          Dr Frances Penafort, MCC (ICF)
+        </h1>
+        
+        <p class="text-base md:text-lg font-semibold text-navy-900 mb-6 leading-relaxed">
+          First and only woman MCC in Malaysia with an ICF-accredited coaching school.
+        </p>
+
+        <p class="text-base text-charcoal-900 leading-relaxed mb-6">
+          Eighteen years coaching C-suite and senior leaders, with clients in sixteen countries — banking, oil and gas, telco, healthcare, FMCG, manufacturing and higher education. Twenty-four years as an academic. Accredited Coach Supervisor. First President of ICF Malaysia and a director on three ICF Global Boards between 2016 and 2022.
+        </p>
+
+        <!-- Direct Credential Verification Links -->
+        <div class="pt-4 flex flex-wrap gap-4">
+          <a 
+            href="https://coachingfederation.org" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-sand-50 border border-sand-200 hover:border-navy-900 rounded-lg text-xs font-semibold text-navy-900 transition"
+          >
+            <span>ICF MCC Credential Directory</span>
+            <span>&nearr;</span>
+          </a>
+
+          <a 
+            href="https://www.coachesstatustool.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-sand-50 border border-sand-200 hover:border-navy-900 rounded-lg text-xs font-semibold text-navy-900 transition"
+          >
+            <span>CSA Accredited Supervisor (CSA)</span>
+            <span>&nearr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Step 2: Global Standardized Figures Counter Strip -->
+  <section class="py-14 bg-navy-900 text-sand-50 border-y border-navy-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+        
+        <div class="border-b md:border-b-0 md:border-r border-navy-800 pb-4 md:pb-0">
+          <div class="font-serif text-3xl font-bold text-sand-50 mb-1">18</div>
+          <div class="text-xs text-sand-200/70 font-medium">Years Coaching</div>
+        </div>
+
+        <div class="border-b md:border-b-0 md:border-r border-navy-800 pb-4 md:pb-0">
+          <div class="font-serif text-3xl font-bold text-sand-50 mb-1">24</div>
+          <div class="text-xs text-sand-200/70 font-medium">Years Academic</div>
+        </div>
+
+        <div class="border-b md:border-b-0 lg:border-r border-navy-800 pb-4 md:pb-0">
+          <div class="font-serif text-3xl font-bold text-sand-50 mb-1">20</div>
+          <div class="text-xs text-sand-200/70 font-medium">Years Consulting</div>
+        </div>
+
+        <div class="border-b md:border-b-0 md:border-r border-navy-800 pb-4 md:pb-0">
+          <div class="font-serif text-3xl font-bold text-sand-50 mb-1">7</div>
+          <div class="text-xs text-sand-200/70 font-medium">Programmes Delivered in Countries</div>
+        </div>
+
+        <div class="border-b md:border-b-0 md:border-r border-navy-800 pb-4 md:pb-0">
+          <div class="font-serif text-3xl font-bold text-sand-50 mb-1">16</div>
+          <div class="text-xs text-sand-200/70 font-medium">Client Countries</div>
+        </div>
+
+        <div>
+          <div class="font-serif text-3xl font-bold text-sand-50 mb-1">5,000+</div>
+          <div class="text-xs text-sand-200/70 font-medium">Coaching Hours</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Background & Leadership Timeline -->
+  <section class="py-20 max-w-4xl mx-auto px-6">
+    
+    <div class="mb-16">
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-6">
+        Academic Rigour & Executive Practice
+      </h2>
+      <p class="text-base text-charcoal-900 leading-relaxed mb-4">
+        Dr Frances Penafort bridges higher education and executive coaching. With twenty-four years as an academic, she brings pedagogical structure and developmental observation to professional coach education.
+      </p>
+      <p class="text-base text-charcoal-900 leading-relaxed mb-4">
+        Her executive coaching practice spans senior leadership within banking, oil and gas, telecommunications, healthcare, FMCG, manufacturing and higher education organisations across sixteen countries.
+      </p>
+      <p class="text-base text-charcoal-900 leading-relaxed">
+        She has designed and conducted leadership programmes across seven countries over twenty years.
+      </p>
+    </div>
+
+    <!-- Governance & Board Leadership -->
+    <div class="p-8 md:p-10 bg-sand-50 border border-sand-200 rounded-xl mb-16">
+      <h3 class="font-serif text-xl font-bold text-navy-900 mb-4">
+        ICF Leadership & Governance
+      </h3>
+      <ul class="space-y-4 text-sm md:text-base text-charcoal-900 leading-relaxed">
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-navy-900 mt-2 shrink-0"></span>
+          <span><strong>First President</strong> of the International Coaching Federation (ICF) Malaysia Chapter.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-navy-900 mt-2 shrink-0"></span>
+          <span><strong>Director on Three ICF Global Boards</strong> between 2016 and 2022.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-navy-900 mt-2 shrink-0"></span>
+          <span><strong>ICF Global Nominating Committee:</strong> Contributor and committee member (2018–2021).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-navy-900 mt-2 shrink-0"></span>
+          <span><strong>Accredited Coach Supervisor</strong> with the Coaching Supervision Academy (CSA).</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Track Record Block -->
+    <div class="bg-sand-200/50 p-8 rounded-xl border border-sand-200 text-center">
+      <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">
+        Education Standard & Exam Record
+      </h3>
+      <p class="text-base text-charcoal-900 leading-relaxed mb-4 max-w-2xl mx-auto">
+        Five cohorts completed. The sixth is running now. Five graduates have sat the ICF credential exam. Five have passed.
+      </p>
+      <p class="text-sm text-charcoal-900/80 leading-relaxed max-w-xl mx-auto">
+        Cohorts are capped at about ten, every session is observed, and every student gets written feedback. That is why the number is small, and it is why we publish it. Ask any school for theirs.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Fluid Animated Statement Banner -->
+  <AnimatedStatement 
+    title="Director of Education"
+    statement="Coaching education requires observed triad practice, written evaluation against the eight ICF competencies, and real clients from week two."
+  />
+
+  <!-- Final Preview CTA -->
+  <section class="py-20 max-w-3xl mx-auto px-6 text-center">
+    <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-4">
+      Meet Dr Frances Penafort
+    </h2>
+    <p class="text-base md:text-lg text-charcoal-900 mb-8 leading-relaxed">
+      The preview runs on the first Saturday of every month. Sixty minutes, no charge, and you will know by the end whether this is for you.
+    </p>
+    <a 
+      href="/attend-a-preview" 
+      class="inline-block px-8 py-4 bg-navy-900 hover:bg-navy-800 text-sand-50 font-semibold text-base rounded-full shadow-sm transition"
+    >
+      Register for the preview
+    </a>
+  </section>
+
+</BaseLayout>

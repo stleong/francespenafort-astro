@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "preview_settings"
+    label: "Monthly Preview Settings"
+    files:
+      - file: "src/content/previews/settings.json"
+        label: "Preview Event Settings"
+        name: "settings"
+        fields:
+          - { label: "Next Dates", name: "dates", widget: "list", default: ["Saturday, 5 September 2026", "Saturday, 3 October 2026", "Saturday, 7 November 2026"] }
+          - { label: "Cap Notice", name: "cap_notice", widget: "string", default: "Places are limited so that everyone can be coached." }
+          - { label: "E-Book File Link", name: "ebook_file", widget: "string", default: "/downloads/frances-ebook.pdf" }
+
+  - name: "cohorts"
+    label: "Upcoming Cohorts"
+    folder: "src/content/cohorts"
+    create: true
+    fields:
+      - { label: "Cohort Title", name: "title", widget: "string" }
+      - { label: "Dates", name: "dates", widget: "string" }
+      - { label: "Fee", name: "fee", widget: "string", default: "RM10,900" }
+      - { label: "Venue", name: "venue", widget: "string", default: "Wealth Wolves Training Room, First Floor, H-2-9 Parklane Commercial Hub, Kelana Jaya" }

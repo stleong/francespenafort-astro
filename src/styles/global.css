@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #0F1E36;
+  --color-navy-800: #162B4D;
+  --color-sand-50: #FDFCFB;
+  --color-sand-100: #F8F7F4;
+  --color-sand-200: #EFECE6;
+  --color-bronze-600: #9E7D47;
+  --color-bronze-700: #856735;
+  --color-charcoal-900: #1F242E;
+
+  --font-serif: 'Merriweather', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
+}
+
+@keyframes fluidShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fluid-gradient {
+  background: linear-gradient(
+    -45deg,
+    #0f1e36, /* Oxford Navy */
+    #1e1b4b, /* Deep Indigo */
+    #312e81, /* Slate Purple */
+    #9e7d47, /* Warm Bronze */
+    #162b4d  /* Deep Sapphire */
+  );
+  background-size: 400% 400%;
+  animation: fluidShift 14s ease infinite;
+}
