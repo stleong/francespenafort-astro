@@ -2,19 +2,34 @@
 interface Props {
   title?: string;
   statement?: string;
+  videoSrc?: string;
 }
 
 const {
   title = "Frances’ Coaching School",
-  statement = "Sixty hours of coach-specific education, ten hours of mentor coaching, and real clients from week two. You finish with four of ICF’s five ACC requirements already done."
+  statement = "Sixty hours of coach-specific education, ten hours of mentor coaching, and real clients from week two. You finish with four of ICF’s five ACC requirements already done.",
+  videoSrc = "/videos/background.mp4"
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden py-16 md:py-20 animate-fluid-gradient text-sand-50">
-  <!-- Subtle glass/film overlay for contrast -->
-  <div class="absolute inset-0 bg-navy-900/25 backdrop-blur-[1px]"></div>
+<section class="relative overflow-hidden py-16 md:py-20 text-sand-50">
+  
+  <!-- 1. Background Video Layer -->
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  >
+    <source src={videoSrc} type="video/mp4" />
+  </video>
 
-  <div class="relative max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+  <!-- 2. Dark Overlay Layer (Crucial for high text contrast & legibility) -->
+  <div class="absolute inset-0 bg-navy-900/50 backdrop-blur-[2px] z-10"></div>
+
+  <!-- 3. Foreground Content Layer -->
+  <div class="relative z-20 max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     
     <!-- Title / Brand column -->
     <div class="lg:col-span-4">
@@ -29,7 +44,7 @@ const {
     <!-- Statement / Philosophy column -->
     <div class="lg:col-span-8">
       <p class="text-base md:text-lg text-sand-100/90 leading-relaxed font-normal">
-        {statement}[cite: 1]
+        {statement}
       </p>
     </div>
 

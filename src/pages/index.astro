@@ -33,43 +33,39 @@ import AnimatedStatement from '../components/AnimatedStatement.astro';
           <div class="inline-flex items-center gap-2 mb-4">
             <span class="w-2 h-2 rounded-full bg-bronze-600 animate-pulse"></span>
             <span class="text-xs font-bold uppercase tracking-widest text-bronze-600">
-              2026 Intakes — August · November
+              2026 Intakes —  November
             </span>
           </div>
 
           <!-- Main Headline -->
           <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-[1.15] mb-6">
-            ICF-accredited Level 1 coach certification. <span class="text-bronze-600">In person, Kuala Lumpur.</span>
+            ICF-accredited Level 1 <span class="text-bronze-600">coach certification.</span>
           </h1>
 
           <!-- Body Copy -->
           <p class="text-base sm:text-lg text-charcoal-900 leading-relaxed mb-6 max-w-2xl">
-            Sixty hours of coach-specific education, ten hours of mentor coaching, and real clients from week two. You finish with four of ICF’s five ACC requirements already done.
+            Sixty hours of coach-specific education, ten hours of mentor coaching.
           </p>
-
-          <p class="text-sm font-semibold text-navy-900 mb-8">
-            First and only woman MCC in Malaysia with an ICF-accredited coaching school.
-          </p>
-
+          
           <!-- Primary Single CTA Button -->
           <div class="mb-8">
             <a 
               href="/attend-a-preview" 
               class="inline-flex items-center justify-center px-8 py-4 bg-charcoal-900 hover:bg-navy-900 text-sand-50 font-medium text-sm sm:text-base rounded-full shadow-sm hover:shadow transition duration-200"
             >
-              Attend the free preview — first Saturday of the month, 60 minutes
+              Attend the preview
             </a>
           </div>
 
           <!-- Bottom Trust & Pricing Matrix Strip -->
           <div class="pt-6 border-t border-sand-200/80 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-charcoal-900/80">
             <div>
-              <span class="font-bold text-navy-900 block mb-0.5">Next Cohort Dates:</span>
+              <span class="font-bold text-navy-900 block mb-0.5">Current Cohort Dates:</span>
               14–15 Aug, 11–12 Sept, 9–10 Oct 2026
             </div>
             <div>
-              <span class="font-bold text-navy-900 block mb-0.5">Tuition & Funding:</span>
-              RM10,900 · 100% HRD Corp Claimable
+              <span class="font-bold text-navy-900 block mb-0.5">Next Cohort Dates:</span>
+              Dec , Jan, Feb 
             </div>
           </div>
 
@@ -82,17 +78,7 @@ import AnimatedStatement from '../components/AnimatedStatement.astro';
               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" 
               alt="Coaching cohort participating in live triads in Kuala Lumpur" 
               class="w-full h-full object-cover"
-            />
-            
-            <!-- Bottom Floating Trust Pill -->
-            <div class="absolute bottom-4 left-4 right-4 p-4 bg-navy-900/90 backdrop-blur-md rounded-xl text-sand-50 border border-white/10">
-              <p class="text-xs font-serif italic text-sand-100 mb-1">
-                "Real clients from week two. Live triads observed with written feedback."
-              </p>
-              <div class="text-[11px] font-semibold text-sand-200 uppercase tracking-wider">
-                In-Person Cohorts Capped at ~10
-              </div>
-            </div>
+            />                        
           </div>
         </div>
 
@@ -121,52 +107,94 @@ import AnimatedStatement from '../components/AnimatedStatement.astro';
         </p>
       </div>
 
-      <!-- Badge Strip (Linked to Verifiable Issuing Bodies) -->
-      <div class="lg:col-span-5 flex flex-wrap sm:flex-nowrap gap-4 justify-start lg:justify-end items-center">
+      <!-- Badge Strip (Pixel-Perfect Identical Cards & Badges) -->
+      <div class="lg:col-span-5 grid grid-cols-3 gap-4">
         
-        <!-- ICF Level 1 School Badge -->
+        <!-- 1. ICF Level 1 School Badge -->
         <a 
           href="https://coachingfederation.org/education-search" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="flex-1 min-w-[140px] max-w-[180px] p-5 bg-sand-100 rounded-lg border border-sand-200 text-center hover:border-navy-900 transition flex flex-col items-center justify-between"
+          class="flex flex-col items-center justify-between p-5 bg-sand-100/60 rounded-xl border border-sand-200 text-center hover:border-navy-900 hover:bg-sand-100 transition duration-200 group h-full shadow-2xs"
         >
-          <div class="w-16 h-16 rounded-full bg-navy-900 text-sand-50 flex flex-col items-center justify-center font-bold mb-3 shadow-xs">
-            <span class="text-[10px] tracking-tight text-sand-200 uppercase">ICF</span>
-            <span class="text-xs font-bold leading-none">LEVEL 1</span>
+          <!-- Fixed 72px square badge wrapper -->
+          <div class="w-18 h-18 flex items-center justify-center mb-3 shrink-0">
+            <img 
+              src="/images/badges/icf_level_1.png" 
+              alt="ICF Level 1 Accredited Education" 
+              class="w-full h-full object-contain p-0.5 group-hover:scale-105 transition-transform duration-200"
+            />
           </div>
-          <span class="text-xs font-semibold text-navy-900">Accredited School</span>
-          <span class="text-[10px] text-charcoal-900/60 mt-1">Verify Directory &nearr;</span>
+
+          <!-- Title with fixed height so 1-line and 2-line text match -->
+          <div class="min-h-[2.5rem] flex items-center justify-center">
+            <span class="text-xs font-bold text-navy-900 leading-snug">
+              Accredited<br />School
+            </span>
+          </div>
+
+          <!-- Link label -->
+          <span class="text-[11px] text-charcoal-900/60 group-hover:text-navy-900 transition mt-2">
+            Verify Directory &nearr;
+          </span>
         </a>
 
-        <!-- ICF MCC Badge -->
+        <!-- 2. ICF MCC Badge -->
         <a 
-          href="https://coachingfederation.org" 
+          href="https://apps.coachingfederation.org/eweb/CCFDynamicPage.aspx?webcode=ccfcoachprofileview&coachcstkey=9FD41289-BAF4-482E-9841-EB8DCCBB5C2F" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="flex-1 min-w-[140px] max-w-[180px] p-5 bg-sand-100 rounded-lg border border-sand-200 text-center hover:border-navy-900 transition flex flex-col items-center justify-between"
+          class="flex flex-col items-center justify-between p-5 bg-sand-100/60 rounded-xl border border-sand-200 text-center hover:border-navy-900 hover:bg-sand-100 transition duration-200 group h-full shadow-2xs"
         >
-          <div class="w-16 h-16 rounded-full bg-navy-900 text-sand-50 flex flex-col items-center justify-center font-bold mb-3 shadow-xs">
-            <span class="text-[10px] tracking-tight text-sand-200 uppercase">ICF</span>
-            <span class="text-sm font-bold leading-none">MCC</span>
+          <!-- Fixed 72px square badge wrapper -->
+          <div class="w-18 h-18 flex items-center justify-center mb-3 shrink-0">
+            <img 
+              src="/images/badges/mcc_logo.png" 
+              alt="ICF Master Certified Coach (MCC)" 
+              class="w-full h-full object-contain p-0.5 group-hover:scale-105 transition-transform duration-200"
+            />
           </div>
-          <span class="text-xs font-semibold text-navy-900">Master Coach</span>
-          <span class="text-[10px] text-charcoal-900/60 mt-1">Verify Credential &nearr;</span>
+
+          <!-- Title with fixed height -->
+          <div class="min-h-[2.5rem] flex items-center justify-center">
+            <span class="text-xs font-bold text-navy-900 leading-snug">
+              Master<br />Coach
+            </span>
+          </div>
+
+          <!-- Link label -->
+          <span class="text-[11px] text-charcoal-900/60 group-hover:text-navy-900 transition mt-2">
+            Verify Credential &nearr;
+          </span>
         </a>
 
-        <!-- CSA Supervisor Badge -->
+        <!-- 3. CSA Supervisor Badge -->
         <a 
           href="https://www.coachesstatustool.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="flex-1 min-w-[140px] max-w-[180px] p-5 bg-sand-100 rounded-lg border border-sand-200 text-center hover:border-navy-900 transition flex flex-col items-center justify-between"
+          class="flex flex-col items-center justify-between p-5 bg-sand-100/60 rounded-xl border border-sand-200 text-center hover:border-navy-900 hover:bg-sand-100 transition duration-200 group h-full shadow-2xs"
         >
-          <div class="w-16 h-16 rounded-full bg-navy-900 text-sand-50 flex flex-col items-center justify-center font-bold mb-3 shadow-xs">
-            <span class="text-[10px] tracking-tight text-sand-200 uppercase">CSA</span>
-            <span class="text-xs font-bold leading-none">SUPERVISOR</span>
+          <!-- Fixed 72px square badge wrapper -->
+          <div class="w-18 h-18 flex items-center justify-center mb-3 shrink-0">
+            <img 
+              src="/images/badges/actc_logo.png" 
+              alt="CSA Accredited Coach Supervisor" 
+              class="w-full h-full object-contain p-0.5 group-hover:scale-105 transition-transform duration-200"
+            />
           </div>
-          <span class="text-xs font-semibold text-navy-900">Coach Supervisor</span>
-          <span class="text-[10px] text-charcoal-900/60 mt-1">Accredited (CSA) &nearr;</span>
+
+          <!-- Title with fixed height -->
+          <div class="min-h-[2.5rem] flex items-center justify-center">
+            <span class="text-xs font-bold text-navy-900 leading-snug">
+              Coach<br />Supervisor
+            </span>
+          </div>
+
+          <!-- Link label -->
+          <span class="text-[11px] text-charcoal-900/60 group-hover:text-navy-900 transition mt-2">
+            Accredited (CSA) &nearr;
+          </span>
         </a>
 
       </div>
@@ -243,10 +271,10 @@ import AnimatedStatement from '../components/AnimatedStatement.astro';
     <div class="p-8 md:p-12 bg-sand-50 border border-sand-200 rounded-lg">
       <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900 mb-4">Accredited, not aligned.</h2>
       <p class="text-base leading-relaxed text-charcoal-900 mb-4">
-        Frances’ Coaching School holds ICF Level 1 accreditation. That has one practical consequence for you: when you apply for your ACC, you use ICF’s Level 1 path — USD 175 for ICF members, reviewed in about four weeks.
+        Frances’ Coaching School holds ICF Level 1 accreditation. That has one practical consequence for you: when you apply for your ACC, you use ICF’s Level 1 path reviewed in about four weeks.
       </p>
       <p class="text-base leading-relaxed text-charcoal-900 mb-4">
-        Coaches who train with a programme ICF has not accredited apply through the Portfolio path instead — USD 475 for members, reviewed in about fourteen weeks.
+        Coaches who train with a programme ICF has not accredited apply through the Portfolio path instead. reviewed in about fourteen weeks.
       </p>
       <p class="text-base leading-relaxed text-charcoal-900 mb-6">
         Same credential. Different route to it. Ask any school you are considering which one you will be using.
@@ -257,22 +285,10 @@ import AnimatedStatement from '../components/AnimatedStatement.astro';
     </div>
   </section>
 
-  <!-- Block 4: The record -->
-  <section class="py-16 bg-navy-900 text-sand-50">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <p class="text-xl md:text-2xl font-serif leading-relaxed mb-6">
-        Five cohorts completed. The sixth is running now. Five graduates have sat the ICF credential exam. Five have passed.
-      </p>
-      <p class="text-sm md:text-base text-sand-200/80 leading-relaxed">
-        Cohorts are capped at about ten, every session is observed, and every student gets written feedback. That is why the number is small, and it is why we publish it. Ask any school for theirs.
-      </p>
-    </div>
-  </section>
-
-	<!-- Fluid Animated Statement Banner -->
+  <!-- Fluid Animated Statement Banner -->
   		<AnimatedStatement 
    	 	title="Frances’ Coaching School"
-    	statement="Cohorts are capped at about ten, every session is observed, and every student gets written feedback. That is why the number is small, and it is why we publish it. Ask any school for theirs."[cite: 1]
+    	statement="Cohorts are capped at about ten, every session is observed, and every student gets written feedback. That is why the number is small, and it is why we publish it. Ask any school for theirs."
   	/>
 
   <!-- Block 5: Frances (With Director Portrait Placeholder) -->
@@ -294,7 +310,7 @@ import AnimatedStatement from '../components/AnimatedStatement.astro';
           Dr Frances Penafort, MCC (ICF). Director of Education.
         </h2>
         <p class="text-base leading-relaxed text-charcoal-900 mb-6">
-          Eighteen years coaching C-suite and senior leaders, with clients in sixteen countries — banking, oil and gas, telco, healthcare, FMCG, manufacturing and higher education. Twenty-four years as an academic. Accredited Coach Supervisor. First President of ICF Malaysia and a director on three ICF Global Boards between 2016 and 2022.
+          Sixteen years coaching C-suite and senior leaders, with clients in sixteen countries — banking, oil and gas, telco, healthcare, FMCG, manufacturing and higher education. Twenty-four years as an academic. Accredited Coach Supervisor. FIRST ELECTED  PRESIDENT OF ICF MALAYSIA CHAPTER and a director on three ICF Global Boards between 2016 and 2022.
         </p>
         <a href="/about-frances" class="text-navy-900 font-semibold underline underline-offset-4 hover:text-navy-800 transition">
           More about Frances &rarr;
@@ -304,23 +320,79 @@ import AnimatedStatement from '../components/AnimatedStatement.astro';
     </div>
   </section>
 
-  <!-- Block 6: Testimonials Layout -->
+ <!-- Block 6: Testimonials Layout & Official Brochure Download -->
   <section class="py-16 bg-sand-200/40 border-t border-sand-200">
     <div class="max-w-5xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-sand-50 p-6 rounded border border-sand-200 italic text-charcoal-900 text-sm flex flex-col justify-between">
-          <p>"The observation and instant written feedback after each triad session provided absolute clarity on the ICF competencies."</p>
-          <div class="mt-6 not-italic font-semibold text-xs text-navy-900 uppercase tracking-wider">
-            Verified Graduate, ACC · Cohort 1
+      
+      <!-- Section Title -->
+      <div class="text-center mb-10">
+        <span class="text-xs font-semibold text-navy-900 uppercase tracking-wider block mb-2">Participant Experience</span>
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy-900">Proof, not promises.</h2>
+      </div>
+
+      <!-- Real Student Testimonials from Brochure -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        
+        <!-- Mohammad H. Azmi -->
+        <div class="bg-sand-50 p-6 sm:p-8 rounded-xl border border-sand-200 text-charcoal-900 flex flex-col justify-between shadow-2xs">
+          <blockquote class="italic text-sm sm:text-base leading-relaxed mb-6">
+            “I can confidently go into any coaching session. I don't need to prepare the perfect question - just by being PRESENT, the powerful questions emerge on its own..”
+          </blockquote>
+          <div class="pt-4 border-t border-sand-200 not-italic">
+            <div class="font-serif font-bold text-navy-900 text-sm">Mohammad H. Azmi</div>
+            <div class="text-xs text-charcoal-900/70 mt-0.5">Training and Coaching Practitioner</div>
           </div>
         </div>
-        <div class="bg-sand-50 p-6 rounded border border-sand-200 italic text-charcoal-900 text-sm flex flex-col justify-between">
-          <p>"Having real clients from week two made the ACC credentialing exam a natural step rather than an intimidating milestone."</p>
-          <div class="mt-6 not-italic font-semibold text-xs text-navy-900 uppercase tracking-wider">
-            Verified Graduate, ACC · Cohort 3
+
+        <!-- S. De Costa -->
+        <div class="bg-sand-50 p-6 sm:p-8 rounded-xl border border-sand-200 text-charcoal-900 flex flex-col justify-between shadow-2xs">
+          <blockquote class="italic text-sm sm:text-base leading-relaxed mb-6">
+            “The best thing about FCS is that all students get real coaching clients to coach. We practise with peers in class reviewed by both our instructors and our classmates. You improve real quick with constructive feedback. You cannot beat the experiential learning that you get at FCS”
+          </blockquote>
+          <div class="pt-4 border-t border-sand-200 not-italic">
+            <div class="font-serif font-bold text-navy-900 text-sm">S. De Costa</div>
+            <div class="text-xs text-charcoal-900/70 mt-0.5">Legal and Coaching Practitioner</div>
           </div>
+        </div>
+
+      </div>
+
+      <!-- Official Brochure Download Card -->
+      <div class="p-6 sm:p-8 bg-sand-50 border border-sand-200 rounded-xl shadow-2xs flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-bronze-600 block mb-1">Official Programme Overview</span>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-navy-900 mb-1">
+            Download the 2027 ICF Level 1 Brochure
+          </h3>
+          <p class="text-xs sm:text-sm text-charcoal-900/80 leading-relaxed max-w-xl">
+            Complete details on the 60 class hours, 24 client coaching hours, 10 mentor coaching sessions, and upcoming module dates.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+          <a 
+            href="/downloads/fcs_2027_brochure.pdf" 
+            download="Frances-Coaching-School-2027-Brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-navy-900 hover:bg-navy-800 text-sand-50 text-xs sm:text-sm font-semibold rounded-full shadow-xs transition"
+          >
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>Download PDF</span>
+          </a>
+          <a 
+            href="/downloads/fcs_2027_brochure.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-4 py-3 bg-sand-100 hover:bg-sand-200 text-charcoal-900 text-xs sm:text-sm font-medium rounded-full border border-sand-200 transition"
+          >
+            View in Browser &nearr;
+          </a>
         </div>
       </div>
+
     </div>
   </section>
 

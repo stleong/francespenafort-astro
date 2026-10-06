@@ -1,0 +1,48 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<div class={`p-8 md:p-10 bg-sand-50 border border-sand-200 rounded-2xl shadow-2xs ${className}`}>
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <div class="max-w-xl">
+      <div class="inline-flex items-center gap-2 mb-2">
+        <span class="w-2 h-2 rounded-full bg-bronze-600"></span>
+        <span class="text-xs font-bold uppercase tracking-wider text-bronze-600">Official Programme Brochure</span>
+      </div>
+      <h3 class="font-serif text-xl md:text-2xl font-bold text-navy-900 mb-2">
+        Download the 2027 ICF Level 1 Brochure
+      </h3>
+      <p class="text-sm text-charcoal-900/80 leading-relaxed">
+        Full breakdown of the 60-hour curriculum, 24 client coaching hours, 10 mentor coaching sessions, and 2027 module dates.
+      </p>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+      <a 
+        href="/downloads/fcs-2027-brochure.pdf" 
+        download="Frances-Coaching-School-2027-Brochure.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-navy-900 hover:bg-navy-800 text-sand-50 text-sm font-semibold rounded-full shadow-xs transition duration-200"
+      >
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <span>Download PDF</span>
+      </a>
+
+      <a 
+        href="/downloads/fcs-2027-brochure.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-5 py-3.5 bg-sand-100 hover:bg-sand-200 text-charcoal-900 text-sm font-medium rounded-full border border-sand-200 transition duration-200"
+      >
+        View in Browser &nearr;
+      </a>
+    </div>
+  </div>
+</div>

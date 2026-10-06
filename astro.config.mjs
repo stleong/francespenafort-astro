@@ -9,8 +9,9 @@ export default defineConfig({
   },
   integrations: [sitemap()],
   redirects: {
-    '/get-a-cert': '/icf-level-1-acc-certification-kuala-lumpur',
-    '/programs': '/icf-level-1-acc-certification-kuala-lumpur',
+    '/get-a-cert': '/icf-level-1',
+    '/programs': '/icf-level-1',
+    '/icf-level-1-acc-certification-kuala-lumpur': '/icf-level-1',
     '/about-me': '/about-frances',
     '/podcasts-videos': '/privacy-policy'
   }
