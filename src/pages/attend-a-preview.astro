@@ -137,6 +137,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <form id="preview-registration-form" class="space-y-5">
 
+            <fieldset class="space-y-3">
+              <legend class="block text-sm font-semibold mb-3">
+                Preferred Session *
+              </legend>
+
+              <div
+                id="preview-session-options"
+                class="space-y-3"
+                aria-live="polite"
+              >
+                <p class="text-sm text-charcoal-900/70">
+                  Loading available sessions...
+                </p>
+              </div>
+            </fieldset>
+
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label for="first_name" class="block text-sm font-semibold mb-2">
@@ -274,9 +290,78 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       if (!response.ok) throw new Error('Schedule unavailable');
 
       const data = await response.json();
-      const session = data.sessions?.[0];
+      const sessions = Array.isArray(data.sessions)
+        ? [...data.sessions].sort((a, b) =>
+            (a.preview_date + 'T' + a.start_time).localeCompare(
+              b.preview_date + 'T' + b.start_time
+            )
+          )
+        : [];
 
+      const session = sessions[0];
       selectedPreviewSessionId = session?.session_id || null;
+
+      const optionsContainer = document.getElementById('preview-session-options');
+
+      if (optionsContainer) {
+        optionsContainer.replaceChildren();
+
+        if (!sessions.length) {
+          const message = document.createElement('p');
+          message.className = 'text-sm text-charcoal-900/70';
+          message.textContent = 'No upcoming sessions are available.';
+          optionsContainer.appendChild(message);
+        }
+
+        sessions.forEach((item, index) => {
+          const label = document.createElement('label');
+          label.className =
+            'flex items-start gap-3 border rounded-xl p-4 cursor-pointer transition hover:border-amber-600';
+
+          const radio = document.createElement('input');
+          radio.type = 'radio';
+          radio.name = 'preferred_session';
+          radio.value = item.session_id;
+          radio.required = true;
+          radio.checked = index === 0;
+          radio.className = 'mt-1';
+
+          radio.addEventListener('change', () => {
+            if (radio.checked) {
+              selectedPreviewSessionId = item.session_id;
+            }
+          });
+
+          const content = document.createElement('span');
+          content.className = 'flex flex-col gap-1';
+
+          const title = document.createElement('strong');
+          title.className = 'text-sm';
+          title.textContent = item.preview_title;
+
+          const details = document.createElement('span');
+          details.className = 'text-sm opacity-70';
+
+          const date = new Date(
+            item.preview_date + 'T' + item.start_time + ':00+08:00'
+          );
+
+          details.textContent = new Intl.DateTimeFormat('en-MY', {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+            hour12: true,
+            timeZone: 'Asia/Kuala_Lumpur'
+          }).format(date) + ' (Malaysia Time)';
+
+          content.append(title, details);
+          label.append(radio, content);
+          optionsContainer.appendChild(label);
+        });
+      }
 
       if (submitButton && selectedPreviewSessionId) {
         submitButton.disabled = false;

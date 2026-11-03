@@ -37,7 +37,12 @@ export function parseCSV(text) {
 
 
 export function getEligibleSessions(records, now = Date.now()) {
-  const seen = new Set();
+  const counts = new Map();
+
+  for (const record of records) {
+    const id = record.session_id;
+    if (id) counts.set(id, (counts.get(id) || 0) + 1);
+  }
 
   return records.filter(r => {
     if (r.display_status !== 'PUBLISHED' ||
@@ -46,8 +51,7 @@ export function getEligibleSessions(records, now = Date.now()) {
     if (!r.session_id ||
         !/^[A-Za-z0-9_-]{1,80}$/.test(r.session_id)) return false;
 
-    if (seen.has(r.session_id)) return false;
-    seen.add(r.session_id);
+    if (counts.get(r.session_id) !== 1) return false;
 
     if (!/^\d{4}-\d{2}-\d{2}$/.test(r.preview_date) ||
         !/^\d{2}:\d{2}$/.test(r.start_time)) return false;
