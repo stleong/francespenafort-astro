@@ -1,0 +1,387 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Free Online Coaching Preview"
+  description="Discover professional coaching and ICF Level 1 coach education with Frances' Coaching School in a free 60-minute online Zoom preview."
+>
+  <main>
+    <section class="bg-navy-900 text-sand-50 py-16 lg:py-24">
+      <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-bronze-600 font-bold uppercase tracking-widest text-xs mb-5">
+            Frances' Coaching School | Free Online Preview
+          </p>
+          <h1 class="font-serif text-4xl lg:text-5xl font-bold leading-tight mb-6">
+            Discover the Power of Professional Coaching
+          </h1>
+          <p class="text-lg leading-relaxed mb-8 text-sand-100">
+            Join our free 60-minute online preview to explore professional coaching,
+            what coach training involves, and whether this journey is right for you.
+          </p>
+          <a href="#registration"
+             class="inline-flex px-8 py-4 bg-sand-50 text-navy-900 font-bold rounded-full hover:bg-sand-200 transition">
+            Explore the Free Preview
+          </a>
+          <p class="mt-5 text-sm text-sand-200">
+            Online via Zoom · 60 minutes · Free to attend
+          </p>
+        </div>
+
+        <div class="bg-sand-50 text-charcoal-900 rounded-2xl p-8 lg:p-10 shadow-lg">
+          <p class="text-bronze-600 text-xs font-bold uppercase tracking-widest mb-4">
+            Your Coaching Journey Starts Here
+          </p>
+          <h2 class="font-serif text-2xl lg:text-3xl font-bold text-navy-900 mb-5">
+            Experience a Professional Coaching Preview
+          </h2>
+          <p class="leading-relaxed mb-6">
+            Discover how professional coaching differs from giving advice,
+            and learn more about the ICF Level 1 coaching education pathway.
+          </p>
+          <div class="border-t border-sand-200 pt-5 space-y-3 text-sm">
+            <p><strong>Format:</strong> Live online via Zoom</p>
+            <p><strong>Duration:</strong> 60 minutes</p>
+            <p><strong>Investment:</strong> Free</p>
+            <p><strong>Next session:</strong> To be announced</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-20 bg-sand-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl mb-10">
+          <p class="text-bronze-600 text-xs font-bold uppercase tracking-widest mb-3">
+            What You'll Explore
+          </p>
+          <h2 class="font-serif text-3xl font-bold text-navy-900">
+            Is Professional Coaching Right for You?
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="p-7 bg-white rounded-xl border border-sand-200">
+            <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">
+              Understand Coaching
+            </h3>
+            <p class="leading-relaxed">
+              Explore the principles of professional coaching and how coaching
+              conversations support awareness and growth.
+            </p>
+          </article>
+          <article class="p-7 bg-white rounded-xl border border-sand-200">
+            <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">
+              Discover the Training Pathway
+            </h3>
+            <p class="leading-relaxed">
+              Learn about the structure of ICF Level 1 coach education
+              and the learning experience at Frances' Coaching School.
+            </p>
+          </article>
+          <article class="p-7 bg-white rounded-xl border border-sand-200">
+            <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">
+              Ask Your Questions
+            </h3>
+            <p class="leading-relaxed">
+              Explore whether coach education aligns with your professional
+              development goals.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="registration" class="py-16 lg:py-24 bg-sand-100">
+      <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-start">
+
+        <div class="lg:pt-8">
+          <p class="text-bronze-600 text-xs font-bold uppercase tracking-widest mb-4">
+            Free Online Coaching Preview
+          </p>
+
+          <h2 class="font-serif text-3xl lg:text-4xl font-bold text-navy-900 mb-6">
+            Reserve Your Seat for Our Free Coaching Preview
+          </h2>
+
+          <p class="text-lg leading-relaxed mb-6">
+            Discover professional coaching, explore the ICF Level 1
+            coach education pathway, and learn how coaching can
+            support your personal and professional growth.
+          </p>
+
+          <div class="space-y-4 text-charcoal-900">
+            <p><strong>Preview:</strong> <span id="preview-title">Checking schedule...</span></p>
+            <p><strong>Date:</strong> <span id="preview-date">Checking schedule...</span></p>
+            <p><strong>Time:</strong> <span id="preview-time">Checking schedule...</span></p>
+            <p><strong>Format:</strong> Live online via Zoom</p>
+            <p><strong>Duration:</strong> <span id="preview-duration">60 minutes</span></p>
+            <p><strong>Fee:</strong> Complimentary</p>
+            <p id="preview-description"></p>
+          </div>
+
+          <p class="mt-8 text-sm text-charcoal-900/70">
+            Once registered, you will receive your personal Zoom joining
+            details by email.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-7 sm:p-10 border border-sand-200">
+          <h3 class="font-serif text-2xl font-bold text-navy-900 mb-2">
+            Register for FREE
+          </h3>
+
+          <p class="text-sm text-charcoal-900/70 mb-7">
+            Complete your details to reserve your place.
+          </p>
+
+          <form id="preview-registration-form" class="space-y-5">
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="first_name" class="block text-sm font-semibold mb-2">
+                  First Name *
+                </label>
+                <input
+                  id="first_name"
+                  name="first_name"
+                  type="text"
+                  autocomplete="given-name"
+                  required
+                  maxlength="100"
+                  class="w-full border border-sand-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-navy-900"
+                  placeholder="First name"
+                />
+              </div>
+
+              <div>
+                <label for="last_name" class="block text-sm font-semibold mb-2">
+                  Last Name *
+                </label>
+                <input
+                  id="last_name"
+                  name="last_name"
+                  type="text"
+                  autocomplete="family-name"
+                  required
+                  maxlength="100"
+                  class="w-full border border-sand-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-navy-900"
+                  placeholder="Last name"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2">
+                Email Address *
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="254"
+                class="w-full border border-sand-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-navy-900"
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold mb-2">
+                WhatsApp / Mobile Number *
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+                maxlength="30"
+                class="w-full border border-sand-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-navy-900"
+                placeholder="+60 12 345 6789"
+              />
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input
+                id="privacy_consent"
+                name="privacy_consent"
+                type="checkbox"
+                required
+                class="mt-1"
+              />
+              <label for="privacy_consent" class="text-sm leading-relaxed">
+                I agree to the use of my registration details to
+                administer this Zoom coaching preview, including
+                sharing the necessary information with Zoom.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              id="preview-submit"
+              disabled
+              class="w-full bg-navy-900 text-white font-bold py-4 px-6 rounded-full opacity-60 cursor-not-allowed"
+            >
+              Reserve My FREE Seat
+            </button>
+
+            <p id="preview-form-status" class="text-sm text-center text-charcoal-900/70" role="status">
+              Registration is not yet open. The form will be activated
+              after the Zoom connection is tested.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-sand-50">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="mb-4 text-charcoal-900">
+          Want to learn more about the full coaching certification programme?
+        </p>
+        <a href="/icf-level-1"
+           class="font-semibold text-navy-900 underline underline-offset-4 hover:text-bronze-600">
+          Explore ICF Level 1 Coach Certification
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  let selectedPreviewSessionId = null;
+
+  const registrationForm = document.getElementById('preview-registration-form');
+  const submitButton = document.getElementById('preview-submit');
+  const formStatus = document.getElementById('preview-form-status');
+
+  async function loadPreviewSchedule() {
+    const fields = {
+      title: document.getElementById('preview-title'),
+      date: document.getElementById('preview-date'),
+      time: document.getElementById('preview-time'),
+      duration: document.getElementById('preview-duration'),
+      description: document.getElementById('preview-description')
+    };
+
+    if (!fields.title || !fields.date || !fields.time ||
+        !fields.duration || !fields.description) return;
+
+    try {
+      const response = await fetch('/api/preview-sessions');
+      if (!response.ok) throw new Error('Schedule unavailable');
+
+      const data = await response.json();
+      const session = data.sessions?.[0];
+
+      selectedPreviewSessionId = session?.session_id || null;
+
+      if (submitButton && selectedPreviewSessionId) {
+        submitButton.disabled = false;
+        submitButton.classList.remove('opacity-60', 'cursor-not-allowed');
+        submitButton.classList.add('hover:bg-bronze-600');
+      }
+
+      if (formStatus && selectedPreviewSessionId) {
+        formStatus.textContent =
+          'Complete the form to reserve your free place.';
+      }
+
+      if (!session) {
+        fields.title.textContent = 'New preview coming soon';
+        fields.date.textContent = 'To be announced';
+        fields.time.textContent = 'To be announced';
+        fields.duration.textContent = '60 minutes';
+        fields.description.textContent = '';
+        return;
+      }
+
+      const date = new Date(
+        session.preview_date + 'T' + session.start_time + ':00+08:00'
+      );
+
+      fields.title.textContent = session.preview_title;
+      fields.date.textContent = new Intl.DateTimeFormat('en-MY', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        weekday: 'long',
+        timeZone: 'Asia/Kuala_Lumpur'
+      }).format(date);
+
+      fields.time.textContent = new Intl.DateTimeFormat('en-MY', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Kuala_Lumpur'
+      }).format(date) + ' (Malaysia Time)';
+
+      fields.duration.textContent =
+        session.duration_minutes + ' minutes';
+
+      fields.description.textContent = session.description || '';
+    } catch {
+      fields.title.textContent = 'Schedule temporarily unavailable';
+      fields.date.textContent = 'Please check again later';
+      fields.time.textContent = 'To be confirmed';
+      fields.description.textContent = '';
+    }
+  }
+
+  registrationForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!selectedPreviewSessionId || !submitButton || !formStatus) {
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Registering...';
+    formStatus.textContent = 'Submitting your registration to Zoom...';
+
+    const formData = new FormData(registrationForm);
+
+    const payload = {
+      session_id: selectedPreviewSessionId,
+      first_name: String(formData.get('first_name') || ''),
+      last_name: String(formData.get('last_name') || ''),
+      email: String(formData.get('email') || ''),
+      phone: String(formData.get('phone') || ''),
+      privacy_consent: formData.get('privacy_consent') === 'on'
+    };
+
+    try {
+      const response = await fetch('/api/preview-register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || 'Registration failed. Please try again.'
+        );
+      }
+
+      formStatus.textContent =
+        'Registration successful! Please check your email for Zoom joining details.';
+
+      submitButton.textContent = 'Registration Successful';
+      registrationForm.reset();
+
+    } catch (error) {
+      formStatus.textContent =
+        error instanceof Error
+          ? error.message
+          : 'Registration failed. Please try again.';
+
+      submitButton.disabled = false;
+      submitButton.textContent = 'Reserve My FREE Seat';
+    }
+  });
+  loadPreviewSchedule();
+</script>

@@ -22,3 +22,17 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Local Cloudflare development secrets
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Wrangler local development files
+.wrangler/
+
+# Local Zoom authentication test
+zoom-oauth-test.mjs
+
+# Local development backups
+*.bak
